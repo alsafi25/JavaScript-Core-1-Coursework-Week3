@@ -8,7 +8,20 @@
 */
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+//var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+arr.forEach(function(current_value) {
+    if (current_value % 3 === 0) {
+        console.log("fizz");
+    } else if (current_value % 5 === 0) {
 
+        console.log("Buzz");
+
+    } else if (current_value % 3 === 0 && current_value % 5 === 0) {
+        console.log("FizzBuzz");
+    } else
+        console.log(current_value);
+
+});
 /* EXPECTED OUTPUT */
 
 /*
