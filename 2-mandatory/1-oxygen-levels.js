@@ -11,7 +11,10 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function safeLevels() {}
+
+function safeLevels(arr) {
+    return arr.find(i => parseFloat(i) > 19.5 && parseFloat(i) < 23.5);
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -22,16 +25,16 @@ const oxygenLevels3 = ["200%", "21.1%"];
 const util = require("util");
 
 function test(test_name, actual, expected) {
-  let status;
-  if (actual === expected) {
-    status = "PASSED";
-  } else {
-    status = `FAILED: expected: ${util.inspect(
+    let status;
+    if (actual === expected) {
+        status = "PASSED";
+    } else {
+        status = `FAILED: expected: ${util.inspect(
       expected
     )} but your function returned: ${util.inspect(actual)}`;
-  }
+    }
 
-  console.log(`${test_name}: ${status}`);
+    console.log(`${test_name}: ${status}`);
 }
 
 test("safeLevels function works - case 1", safeLevels(oxygenLevels1), "19.9%");

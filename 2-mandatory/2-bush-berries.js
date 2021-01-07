@@ -21,7 +21,19 @@
   Let's first look at an example that will teach you how to use these methods.
 */
 
-function bushChecker() {}
+function bushChecker(arr) {
+
+    if (arr.every(val => val === "pink")) {
+        return 'Bush is safe to eat from';
+    } else {
+        return 'Toxic! Leave bush alone!';
+    }
+
+
+
+
+
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -31,26 +43,26 @@ let bushBerryColours2 = ["pink", "pink", "pink", "pink"];
 const util = require("util");
 
 function test(test_name, actual, expected) {
-  let status;
-  if (actual === expected) {
-    status = "PASSED";
-  } else {
-    status = `FAILED: expected: ${util.inspect(
+    let status;
+    if (actual === expected) {
+        status = "PASSED";
+    } else {
+        status = `FAILED: expected: ${util.inspect(
       expected
     )} but your function returned: ${util.inspect(actual)}`;
-  }
+    }
 
-  console.log(`${test_name}: ${status}`);
+    console.log(`${test_name}: ${status}`);
 }
 
 test(
-  "bushChecker funtion works - case 1",
-  bushChecker(bushBerryColours1),
-  "Toxic! Leave bush alone!"
+    "bushChecker funtion works - case 1",
+    bushChecker(bushBerryColours1),
+    "Toxic! Leave bush alone!"
 );
 
 test(
-  "bushChecker funtion works - case 1",
-  bushChecker(bushBerryColours2),
-  "Bush is safe to eat from"
+    "bushChecker funtion works - case 1",
+    bushChecker(bushBerryColours2),
+    "Bush is safe to eat from"
 );
