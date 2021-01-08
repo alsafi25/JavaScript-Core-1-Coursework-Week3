@@ -29,10 +29,6 @@ function bushChecker(arr) {
         return 'Toxic! Leave bush alone!';
     }
 
-
-
-
-
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

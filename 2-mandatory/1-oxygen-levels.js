@@ -13,7 +13,7 @@
 
 
 function safeLevels(arr) {
-    return arr.find(i => parseFloat(i) > 19.5 && parseFloat(i) < 23.5);
+    return arr.find(x => parseFloat(x) > 19.5 && parseFloat(x) < 23.5);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
